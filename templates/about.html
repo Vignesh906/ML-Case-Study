@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}About & Dataset Architecture • Multimodal Delay AI{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1 class="page-title">Project Architecture & Methodology</h1>
+  <p class="page-subtitle">Academic technical specification, dataset inventory, and data leakage safeguards</p>
+</div>
+
+<!-- Architecture & Pipeline Flow Card -->
+<div class="card" style="margin-bottom: 2rem;">
+  <h3 style="margin-bottom: 0.75rem;">1. System Architecture Overview</h3>
+  <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+    The system utilizes a decoupled machine learning architecture where data ingestion, leakage-free feature engineering, and model training are executed offline. The trained model artifacts and scikit-learn preprocessing pipelines are persisted via <code>joblib</code> and served asynchronously by a high-performance Python/Flask web dashboard.
+  </p>
+
+  <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; font-family: monospace; font-size: 0.85rem; color: #93c5fd; overflow-x: auto;">
+Raw Multimodal Data (Transit GTFS + US DOT Flights)
+      │
+      ▼
+Memory-Efficient Ingestion & Standardization (src/data_loader.py)
+      │
+      ▼
+Unified Multimodal Representation (BUS, TRAIN, METRO, AIRPLANE)
+      │
+      ▼
+Leakage-Free Feature Engineering (src/feature_engineering.py)
+      │
+      ▼
+Scikit-Learn ColumnTransformer Pipeline (StandardScaler + OneHotEncoder)
+      │
+      ▼
+Candidate Model Training & Class Imbalance Balancing (src/train_models.py)
+├── Logistic Regression (Baseline)
+├── Decision Tree (Interpretable)
+├── Random Forest (Ensemble)
+├── Linear SVM (Calibrated Probability Classifier)
+└── K-Nearest Neighbors (KNN - Metric Distance Classifier)
+      │
+      ▼
+Macro F1 Model Selection & Joblib Artifact Serialization (models/)
+      │
+      ▼
+Flask Web App Engine & Real-Time Inference Interface (app.py)
+  </div>
+</div>
+
+<!-- Dataset Provenance & Limitations -->
+<div class="grid-cards-2">
+  <div class="card">
+    <h3 style="margin-bottom: 0.75rem;">2. Dataset Provenance & Characteristics</h3>
+    <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; padding-left: 1.25rem;">
+      <li>
+        <strong>Public Transit Dataset</strong>: Spans the calendar year 2020 across 5 major global cities (Berlin, London, Paris, Tokyo, Singapore). Covers <strong>Bus</strong>, <strong>Train/Rail</strong>, and <strong>Metro</strong> modalities with 88 operational features.
+      </li>
+      <li>
+        <strong>Commercial Aviation Dataset</strong>: Derived from official United States Department of Transportation (US DOT) Bureau of Transportation Statistics (BTS) 2015 airline on-time performance records (5.8M flights across 14 airlines and 322 commercial airports).
+      </li>
+      <li>
+        <strong>Target Severity Discretization</strong>:
+        <ul style="margin-top: 0.25rem;">
+          <li><code>ON TIME</code>: &le; 5.0 minutes delay</li>
+          <li><code>MODERATELY DELAYED</code>: &gt; 5.0 to &le; 20.0 minutes delay</li>
+          <li><code>SEVERELY DELAYED</code>: &gt; 20.0 minutes delay</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom: 0.75rem; color: var(--status-moderate);">3. Important Limitations & Academic Integrity</h3>
+    <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1rem;">
+      <p style="color: #fcd34d; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">Synthetic Transit Benchmark & Historical Aviation Data</p>
+      <p style="color: var(--text-secondary); font-size: 0.85rem;">
+        The urban public transit data (Bus, Train/Rail, Metro) is a calibrated synthetic urban simulation benchmark (<code>transit_v2</code>) designed to evaluate multimodal machine learning pipelines under zero-inflated, right-skewed noise conditions. It does not represent live vehicle-tracking feeds from transit authorities. The commercial aviation dataset represents authentic calendar year 2015 flight records from the US Department of Transportation (DOT Form 41).
+      </p>
+    </div>
+    <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; padding-left: 1.25rem;">
+      <li>
+        <strong>Live Weather Telemetry</strong>: Weather conditions and temperatures are fetched live from Open-Meteo for the current observation moment only; they are not matched to historical flight timestamps.
+      </li>
+      <li>
+        <strong>Absence of Live GPS Telemetry</strong>: The system evaluates scheduled timetable parameters and ambient meteorology; live automated vehicle location (AVL), Automatic Dependent Surveillance–Broadcast (ADS-B), and FAA ground-stop feeds are not integrated.
+      </li>
+      <li>
+        <strong>Uniform Threshold Notice</strong>: Exact delay severity thresholds (On Time: &le; 5 min, Moderate: &gt; 5 to &le; 20 min, Severe: &gt; 20 min) are strictly unified across classifiers, regressors, and the user interface.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Data Leakage Safeguards -->
+<div class="card" style="margin-top: 2rem;">
+  <h3 style="margin-bottom: 0.75rem; color: var(--status-ontime);">4. Strict Data Leakage Prevention Protocol</h3>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Vulnerability Category</th>
+          <th>Potential Leakage Vector</th>
+          <th>Enforced Safeguard / Architecture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Post-Event Metrics</td>
+          <td>Actual arrival delay, taxi-in, wheels-on</td>
+          <td>Excluded entirely from training and feature matrices.</td>
+        </tr>
+        <tr>
+          <td>Post-Trip Status Flags</td>
+          <td><code>service_status</code>, <code>on_time_flag</code></td>
+          <td>Discarded during data ingestion. Only pre-dispatch features used.</td>
+        </tr>
+        <tr>
+          <td>Future Historical Delays</td>
+          <td>Rolling statistics incorporating future trips</td>
+          <td>Rolling means calculated strictly from prior time windows.</td>
+        </tr>
+        <tr>
+          <td>Temporal Splitting</td>
+          <td>Random shuffle leaking future patterns</td>
+          <td>Strict chronological partitioning: Train (Jan-Sep), Val (Oct), Test (Nov-Dec).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

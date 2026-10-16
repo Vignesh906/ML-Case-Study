@@ -1,0 +1,845 @@
+{
+  "case_a_bus_clear": {
+    "case_name": "Bus London - Clear (16.8 C)",
+    "payload": {
+      "transport_mode": "BUS",
+      "city": "London",
+      "carrier_or_route": "RT_LON_001",
+      "origin": "STN_LON_0037",
+      "destination": "STN_LON_0211",
+      "hour": 8,
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 51.1,
+      "scheduled_duration_min": 102.2,
+      "historical_delay_mean": 1.2,
+      "headway_min": 15,
+      "vehicle_capacity": 80,
+      "occupancy_rate": 0.65,
+      "temperature_c": 16.8,
+      "weather_condition": "clear"
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "BUS",
+      "predicted_category_id": 0,
+      "predicted_category": "ON TIME",
+      "estimated_delay_min": 2.67,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 8.16,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 71.6,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 71.6,
+        "MODERATELY DELAYED": 27.0,
+        "SEVERELY DELAYED": 1.4
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Low",
+      "risk_badge": "badge-ontime",
+      "risk_desc": "Nominal operating conditions; on-time arrival likely (<= 5 min delay)",
+      "has_disagreement": false,
+      "raw_classifier_label": "ON TIME",
+      "disagreement_disclosure": null,
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (BUS Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (BUS Model)",
+      "data_source": "Synthetic Urban Transit Simulation Benchmark v2 (Fixed Corridors) + Live Open-Meteo Weather",
+      "limitations": "Validated corridor-level academic transit simulation benchmark; live GTFS vehicle GPS feeds not linked.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Peak Congestion",
+          "value": "Hour 08:00 rush window (vs 12:00 off-peak: -0.09 min delay, -0.8% P(Severe))",
+          "impact": "Moderate Impact"
+        },
+        {
+          "factor": "Atmospheric Conditions",
+          "value": "Clear / Nominal visibility (Zero meteorological penalty observed)",
+          "impact": "Favorable"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 2.6675938028278683,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 8.155670075161632,
+    "raw_unrounded_probabilities": [
+      0.7159817434795418,
+      0.2701120698339984,
+      0.013906186686460004
+    ],
+    "raw_classifier_prediction": 0,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  },
+  "case_a_bus_storm": {
+    "case_name": "Bus London - Severe Thunderstorm (16.8 C)",
+    "payload": {
+      "transport_mode": "BUS",
+      "city": "London",
+      "carrier_or_route": "RT_LON_001",
+      "origin": "STN_LON_0037",
+      "destination": "STN_LON_0211",
+      "hour": 8,
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 51.1,
+      "scheduled_duration_min": 102.2,
+      "historical_delay_mean": 1.2,
+      "headway_min": 15,
+      "vehicle_capacity": 80,
+      "occupancy_rate": 0.65,
+      "temperature_c": 16.8,
+      "weather_condition": "storm"
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "BUS",
+      "predicted_category_id": 1,
+      "predicted_category": "MODERATELY DELAYED",
+      "estimated_delay_min": 8.48,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 15.0,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 60.9,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 36.0,
+        "MODERATELY DELAYED": 60.9,
+        "SEVERELY DELAYED": 3.1
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Moderate",
+      "risk_badge": "badge-moderate",
+      "risk_desc": "Moderate schedule variance expected (> 5 to 20 min delay)",
+      "has_disagreement": false,
+      "raw_classifier_label": "MODERATELY DELAYED",
+      "disagreement_disclosure": null,
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (BUS Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (BUS Model)",
+      "data_source": "Synthetic Urban Transit Simulation Benchmark v2 (Fixed Corridors) + Live Open-Meteo Weather",
+      "limitations": "Validated corridor-level academic transit simulation benchmark; live GTFS vehicle GPS feeds not linked.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Peak Congestion",
+          "value": "Hour 08:00 rush window (vs 12:00 off-peak: +0.32 min delay, -0.9% P(Severe))",
+          "impact": "Moderate Impact"
+        },
+        {
+          "factor": "Meteorological Event Impact",
+          "value": "Storm (vs Clear baseline: +5.81 min delay, +1.7% P(Severe))",
+          "impact": "Severe Delay Driver"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 8.482503604432988,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 14.95625198141945,
+    "raw_unrounded_probabilities": [
+      0.3603018304592835,
+      0.6089445316391131,
+      0.030753637901603507
+    ],
+    "raw_classifier_prediction": 1,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  },
+  "case_b_train_clear": {
+    "case_name": "Train Berlin - Clear (15.9 C)",
+    "payload": {
+      "transport_mode": "TRAIN",
+      "city": "Berlin",
+      "carrier_or_route": "RT_BER_002",
+      "origin": "STN_BER_0001",
+      "destination": "STN_BER_0005",
+      "hour": 8,
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 40.0,
+      "scheduled_duration_min": 50.0,
+      "historical_delay_mean": 0.6,
+      "headway_min": 20,
+      "vehicle_capacity": 400,
+      "occupancy_rate": 0.7,
+      "weather_condition": "clear",
+      "temperature_c": 15.9
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "TRAIN",
+      "predicted_category_id": 0,
+      "predicted_category": "ON TIME",
+      "estimated_delay_min": 1.52,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 5.06,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 91.0,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 91.0,
+        "MODERATELY DELAYED": 8.2,
+        "SEVERELY DELAYED": 0.8
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Low",
+      "risk_badge": "badge-ontime",
+      "risk_desc": "Nominal operating conditions; on-time arrival likely (<= 5 min delay)",
+      "has_disagreement": false,
+      "raw_classifier_label": "ON TIME",
+      "disagreement_disclosure": null,
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (TRAIN Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (TRAIN Model)",
+      "data_source": "Synthetic Urban Transit Simulation Benchmark v2 (Fixed Corridors) + Live Open-Meteo Weather",
+      "limitations": "Validated corridor-level academic transit simulation benchmark; live GTFS vehicle GPS feeds not linked.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Peak Congestion",
+          "value": "Hour 08:00 rush window (vs 12:00 off-peak: +0.00 min delay, -0.5% P(Severe))",
+          "impact": "Moderate Impact"
+        },
+        {
+          "factor": "Atmospheric Conditions",
+          "value": "Clear / Nominal visibility (Zero meteorological penalty observed)",
+          "impact": "Favorable"
+        },
+        {
+          "factor": "Service Dispatch Headway",
+          "value": "20 mins headway spacing (vs 8 min baseline: +0.00 min delay)",
+          "impact": "Moderate Impact"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 1.5168777577164474,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 5.062420847344326,
+    "raw_unrounded_probabilities": [
+      0.9214352802981056,
+      0.07030382292007487,
+      0.008260896781819486
+    ],
+    "raw_classifier_prediction": 0,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  },
+  "case_b_train_storm": {
+    "case_name": "Train Berlin - Severe Thunderstorm (40.9 C)",
+    "payload": {
+      "transport_mode": "TRAIN",
+      "city": "Berlin",
+      "carrier_or_route": "RT_BER_002",
+      "origin": "STN_BER_0001",
+      "destination": "STN_BER_0005",
+      "hour": 8,
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 40.0,
+      "scheduled_duration_min": 50.0,
+      "historical_delay_mean": 0.6,
+      "headway_min": 20,
+      "vehicle_capacity": 400,
+      "occupancy_rate": 0.7,
+      "weather_condition": "storm",
+      "temperature_c": 40.9
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "TRAIN",
+      "predicted_category_id": 0,
+      "predicted_category": "ON TIME",
+      "estimated_delay_min": 1.52,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 6.37,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 72.5,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 72.5,
+        "MODERATELY DELAYED": 26.1,
+        "SEVERELY DELAYED": 1.4
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Low",
+      "risk_badge": "badge-ontime",
+      "risk_desc": "Nominal operating conditions; on-time arrival likely (<= 5 min delay)",
+      "has_disagreement": false,
+      "raw_classifier_label": "ON TIME",
+      "disagreement_disclosure": null,
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (TRAIN Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (TRAIN Model)",
+      "data_source": "Synthetic Urban Transit Simulation Benchmark v2 (Fixed Corridors) + Live Open-Meteo Weather",
+      "limitations": "Validated corridor-level academic transit simulation benchmark; live GTFS vehicle GPS feeds not linked.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Peak Congestion",
+          "value": "Hour 08:00 rush window (vs 12:00 off-peak: +0.00 min delay, -0.4% P(Severe))",
+          "impact": "Moderate Impact"
+        },
+        {
+          "factor": "Meteorological Event Impact",
+          "value": "Storm (vs Clear baseline: +0.00 min delay, +0.7% P(Severe))",
+          "impact": "Moderate Impact"
+        },
+        {
+          "factor": "Service Dispatch Headway",
+          "value": "20 mins headway spacing (vs 8 min baseline: +0.00 min delay)",
+          "impact": "Moderate Impact"
+        },
+        {
+          "factor": "Ambient Temperature Extreme",
+          "value": "40.9\u00b0C ambient thermal condition (vs 18.0\u00b0C ref: +0.00 min delay)",
+          "impact": "Moderate Impact"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 1.5168777577164474,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 6.367783458690144,
+    "raw_unrounded_probabilities": [
+      0.753219917411687,
+      0.2326392184318114,
+      0.014140864156501561
+    ],
+    "raw_classifier_prediction": 0,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  },
+  "case_c_metro_hour_8": {
+    "case_name": "Metro Berlin - Hour 8 (15.9 C)",
+    "payload": {
+      "transport_mode": "METRO",
+      "city": "Berlin",
+      "carrier_or_route": "RT_BER_001",
+      "origin": "STN_BER_0001",
+      "destination": "STN_BER_0005",
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 15.0,
+      "scheduled_duration_min": 25.0,
+      "historical_delay_mean": 0.4,
+      "headway_min": 5,
+      "vehicle_capacity": 800,
+      "occupancy_rate": 0.75,
+      "weather_condition": "clear",
+      "temperature_c": 15.9,
+      "hour": 8
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "METRO",
+      "predicted_category_id": 0,
+      "predicted_category": "ON TIME",
+      "estimated_delay_min": 0.37,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 2.06,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 97.4,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 97.4,
+        "MODERATELY DELAYED": 2.0,
+        "SEVERELY DELAYED": 0.6
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Low",
+      "risk_badge": "badge-ontime",
+      "risk_desc": "Nominal operating conditions; on-time arrival likely (<= 5 min delay)",
+      "has_disagreement": false,
+      "raw_classifier_label": "ON TIME",
+      "disagreement_disclosure": null,
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (METRO Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (METRO Model)",
+      "data_source": "Synthetic Urban Transit Simulation Benchmark v2 (Fixed Corridors) + Live Open-Meteo Weather",
+      "limitations": "Validated corridor-level academic transit simulation benchmark; live GTFS vehicle GPS feeds not linked.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Peak Congestion",
+          "value": "Hour 08:00 rush window (vs 12:00 off-peak: +0.02 min delay, -0.3% P(Severe))",
+          "impact": "Moderate Impact"
+        },
+        {
+          "factor": "Atmospheric Conditions",
+          "value": "Clear / Nominal visibility (Zero meteorological penalty observed)",
+          "impact": "Favorable"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 0.36629751311019093,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 2.0561132884514968,
+    "raw_unrounded_probabilities": [
+      0.9805389432509157,
+      0.014180477603030917,
+      0.00528057914605337
+    ],
+    "raw_classifier_prediction": 0,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  },
+  "case_c_metro_hour_12": {
+    "case_name": "Metro Berlin - Hour 12 (15.9 C)",
+    "payload": {
+      "transport_mode": "METRO",
+      "city": "Berlin",
+      "carrier_or_route": "RT_BER_001",
+      "origin": "STN_BER_0001",
+      "destination": "STN_BER_0005",
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 15.0,
+      "scheduled_duration_min": 25.0,
+      "historical_delay_mean": 0.4,
+      "headway_min": 5,
+      "vehicle_capacity": 800,
+      "occupancy_rate": 0.75,
+      "weather_condition": "clear",
+      "temperature_c": 15.9,
+      "hour": 12
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "METRO",
+      "predicted_category_id": 0,
+      "predicted_category": "ON TIME",
+      "estimated_delay_min": 0.35,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 0.76,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 98.1,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 98.1,
+        "MODERATELY DELAYED": 1.0,
+        "SEVERELY DELAYED": 0.9
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Low",
+      "risk_badge": "badge-ontime",
+      "risk_desc": "Nominal operating conditions; on-time arrival likely (<= 5 min delay)",
+      "has_disagreement": false,
+      "raw_classifier_label": "ON TIME",
+      "disagreement_disclosure": null,
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (METRO Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (METRO Model)",
+      "data_source": "Synthetic Urban Transit Simulation Benchmark v2 (Fixed Corridors) + Live Open-Meteo Weather",
+      "limitations": "Validated corridor-level academic transit simulation benchmark; live GTFS vehicle GPS feeds not linked.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Dispatch Window",
+          "value": "Hour 12:00 off-peak schedule (Nominal free-flow operating window)",
+          "impact": "Favorable"
+        },
+        {
+          "factor": "Atmospheric Conditions",
+          "value": "Clear / Nominal visibility (Zero meteorological penalty observed)",
+          "impact": "Favorable"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 0.35096739703485785,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 0.7634588916815,
+    "raw_unrounded_probabilities": [
+      0.984275383702337,
+      0.007535117463024997,
+      0.00818949883463801
+    ],
+    "raw_classifier_prediction": 0,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  },
+  "case_d_airplane_clear": {
+    "case_name": "Airplane DL ATL->LAX - Clear (21.7 C)",
+    "payload": {
+      "transport_mode": "AIRPLANE",
+      "city": "Atlanta",
+      "carrier_or_route": "DL",
+      "origin": "ATL",
+      "destination": "LAX",
+      "hour": 12,
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 3132.0,
+      "scheduled_duration_min": 290.0,
+      "historical_delay_mean": 10.9,
+      "temperature_c": 21.7,
+      "weather_condition": "clear"
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "AIRPLANE",
+      "predicted_category_id": 1,
+      "predicted_category": "MODERATELY DELAYED",
+      "estimated_delay_min": 5.76,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 14.3,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 8.5,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 82.5,
+        "MODERATELY DELAYED": 8.5,
+        "SEVERELY DELAYED": 9.0
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Moderate",
+      "risk_badge": "badge-moderate",
+      "risk_desc": "Moderate schedule variance expected (> 5 to 20 min delay)",
+      "has_disagreement": true,
+      "raw_classifier_label": "ON TIME",
+      "disagreement_disclosure": "Model Disagreement Disclosed: Continuous regression estimates 5.76 min (MODERATELY DELAYED regime: > 5 to 20 min), while the multiclass classifier argmax indicates 82.5% probability for ON TIME. Per documented prediction policy, primary severity and operational risk are derived from continuous delay.",
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (AIRPLANE Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (AIRPLANE Model)",
+      "data_source": "Empirical US DOT BTS Commercial Aviation (2015 Historical) + Genuine Open-Meteo Weather",
+      "limitations": "Authentic BTS airline flight delay records with pre-flight Open-Meteo weather matching; live FAA ground stops not integrated.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Dispatch Window",
+          "value": "Hour 12:00 off-peak schedule (Nominal free-flow operating window)",
+          "impact": "Favorable"
+        },
+        {
+          "factor": "Atmospheric Conditions",
+          "value": "Clear / Nominal visibility (Zero meteorological penalty observed)",
+          "impact": "Favorable"
+        },
+        {
+          "factor": "Flight Seat Booking (Aviation Default)",
+          "value": "65% fleet load factor (Non-modeled operational default)",
+          "impact": "Non-Model Input"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 5.759533268530765,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 14.271951446838463,
+    "raw_unrounded_probabilities": [
+      0.8075589223107222,
+      0.09629480531192423,
+      0.09614627237735353
+    ],
+    "raw_classifier_prediction": 0,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  },
+  "case_d_airplane_storm": {
+    "case_name": "Airplane DL ATL->LAX - Severe Thunderstorm (21.7 C)",
+    "payload": {
+      "transport_mode": "AIRPLANE",
+      "city": "Atlanta",
+      "carrier_or_route": "DL",
+      "origin": "ATL",
+      "destination": "LAX",
+      "hour": 12,
+      "day_of_week": 1,
+      "month": 10,
+      "distance_km": 3132.0,
+      "scheduled_duration_min": 290.0,
+      "historical_delay_mean": 10.9,
+      "temperature_c": 21.7,
+      "weather_condition": "storm"
+    },
+    "result_returned": {
+      "status": "success",
+      "transport_mode": "AIRPLANE",
+      "predicted_category_id": 1,
+      "predicted_category": "MODERATELY DELAYED",
+      "estimated_delay_min": 8.77,
+      "typical_median_delay_min": 0.0,
+      "high_end_p90_delay_min": 26.8,
+      "regression_status": "Mode-Specific Regressors Active",
+      "confidence_pct": 26.8,
+      "confidence_label": "Classifier probability of the shown tier",
+      "probabilities": {
+        "ON TIME": 52.3,
+        "MODERATELY DELAYED": 26.8,
+        "SEVERELY DELAYED": 20.9
+      },
+      "base_rates": {
+        "ON TIME": 82.43,
+        "MODERATELY DELAYED": 13.12,
+        "SEVERELY DELAYED": 4.44
+      },
+      "risk_level": "Moderate",
+      "risk_badge": "badge-moderate",
+      "risk_desc": "Moderate schedule variance expected (> 5 to 20 min delay)",
+      "has_disagreement": true,
+      "raw_classifier_label": "ON TIME",
+      "disagreement_disclosure": "Model Disagreement Disclosed: Continuous regression estimates 8.77 min (MODERATELY DELAYED regime: > 5 to 20 min), while the multiclass classifier argmax indicates 52.3% probability for ON TIME. Per documented prediction policy, primary severity and operational risk are derived from continuous delay.",
+      "prediction_policy": "Regression-derived severity tier (> 5 to 20 min) with calibrated classifier probabilities",
+      "classifier_name": "Linear SVM (calibrated)",
+      "regressor_name": "HistGradientBoostingRegressor (AIRPLANE Model)",
+      "model_used": "Linear SVM (calibrated) + HistGradientBoostingRegressor (AIRPLANE Model)",
+      "data_source": "Empirical US DOT BTS Commercial Aviation (2015 Historical) + Genuine Open-Meteo Weather",
+      "limitations": "Authentic BTS airline flight delay records with pre-flight Open-Meteo weather matching; live FAA ground stops not integrated.",
+      "prediction_timestamp": "2026-10-14 19:27:19",
+      "important_factors": [
+        {
+          "factor": "Scheduled Hour & Dispatch Window",
+          "value": "Hour 12:00 off-peak schedule (Nominal free-flow operating window)",
+          "impact": "Favorable"
+        },
+        {
+          "factor": "Meteorological Event Impact",
+          "value": "Storm (vs Clear baseline: +3.01 min delay, +11.9% P(Severe))",
+          "impact": "Severe Delay Driver"
+        },
+        {
+          "factor": "Flight Seat Booking (Aviation Default)",
+          "value": "65% fleet load factor (Non-modeled operational default)",
+          "impact": "Non-Model Input"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "distance_log",
+          "importance": 14.61
+        },
+        {
+          "feature": "speed_kmh",
+          "importance": 6.26
+        },
+        {
+          "feature": "delay_risk_score",
+          "importance": 3.35
+        },
+        {
+          "feature": "distance_km",
+          "importance": 2.84
+        },
+        {
+          "feature": "historical_delay_mean",
+          "importance": 2.51
+        }
+      ]
+    },
+    "raw_unrounded_regression": 8.766964768850212,
+    "raw_unrounded_p50": 0.0,
+    "raw_unrounded_p90": 26.81684593003133,
+    "raw_unrounded_probabilities": [
+      0.4870299808153337,
+      0.2925769114413813,
+      0.22039310774328494
+    ],
+    "raw_classifier_prediction": 0,
+    "regressor_artifact": "HistGradientBoostingRegressor",
+    "classifier_artifact": "CalibratedClassifierCV",
+    "transformed_vector_dim": 49,
+    "nonzero_feature_count": 40
+  }
+}

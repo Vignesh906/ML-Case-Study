@@ -1,0 +1,185 @@
+{
+  "total_records": 104000,
+  "train_records": 80000,
+  "val_records": 12000,
+  "test_records": 12000,
+  "feature_count": 20,
+  "modes": {
+    "AIRPLANE": 20000,
+    "BUS": 20000,
+    "METRO": 20000,
+    "TRAIN": 20000
+  },
+  "delay_distribution": {
+    "ON TIME": {
+      "count": 56824,
+      "pct": 71.0
+    },
+    "MODERATELY DELAYED": {
+      "count": 17327,
+      "pct": 21.7
+    },
+    "SEVERELY DELAYED": {
+      "count": 5849,
+      "pct": 7.3
+    }
+  },
+  "mode_stats": {
+    "BUS": {
+      "records": 20000,
+      "avg_delay_min": 5.7,
+      "on_time_pct": 63.6,
+      "moderate_delay_pct": 30.7,
+      "severe_delay_pct": 5.7
+    },
+    "TRAIN": {
+      "records": 20000,
+      "avg_delay_min": 5.2,
+      "on_time_pct": 65.4,
+      "moderate_delay_pct": 29.4,
+      "severe_delay_pct": 5.2
+    },
+    "METRO": {
+      "records": 20000,
+      "avg_delay_min": 2.8,
+      "on_time_pct": 85.3,
+      "moderate_delay_pct": 13.0,
+      "severe_delay_pct": 1.7
+    },
+    "AIRPLANE": {
+      "records": 20000,
+      "avg_delay_min": 12.8,
+      "on_time_pct": 69.8,
+      "moderate_delay_pct": 13.6,
+      "severe_delay_pct": 16.6
+    }
+  },
+  "hourly_trend": [
+    {
+      "hour": 0,
+      "delay_pct": 22.3
+    },
+    {
+      "hour": 1,
+      "delay_pct": 22.5
+    },
+    {
+      "hour": 2,
+      "delay_pct": 22.7
+    },
+    {
+      "hour": 3,
+      "delay_pct": 21.4
+    },
+    {
+      "hour": 4,
+      "delay_pct": 21.5
+    },
+    {
+      "hour": 5,
+      "delay_pct": 20.7
+    },
+    {
+      "hour": 6,
+      "delay_pct": 19.8
+    },
+    {
+      "hour": 7,
+      "delay_pct": 34.0
+    },
+    {
+      "hour": 8,
+      "delay_pct": 33.5
+    },
+    {
+      "hour": 9,
+      "delay_pct": 37.6
+    },
+    {
+      "hour": 10,
+      "delay_pct": 24.5
+    },
+    {
+      "hour": 11,
+      "delay_pct": 23.6
+    },
+    {
+      "hour": 12,
+      "delay_pct": 24.4
+    },
+    {
+      "hour": 13,
+      "delay_pct": 24.9
+    },
+    {
+      "hour": 14,
+      "delay_pct": 26.0
+    },
+    {
+      "hour": 15,
+      "delay_pct": 25.3
+    },
+    {
+      "hour": 16,
+      "delay_pct": 43.5
+    },
+    {
+      "hour": 17,
+      "delay_pct": 42.3
+    },
+    {
+      "hour": 18,
+      "delay_pct": 44.5
+    },
+    {
+      "hour": 19,
+      "delay_pct": 44.0
+    },
+    {
+      "hour": 20,
+      "delay_pct": 28.5
+    },
+    {
+      "hour": 21,
+      "delay_pct": 24.9
+    },
+    {
+      "hour": 22,
+      "delay_pct": 23.8
+    },
+    {
+      "hour": 23,
+      "delay_pct": 21.4
+    }
+  ],
+  "dow_trend": [
+    {
+      "day": "Mon",
+      "delay_pct": 30.2
+    },
+    {
+      "day": "Tue",
+      "delay_pct": 28.8
+    },
+    {
+      "day": "Wed",
+      "delay_pct": 28.5
+    },
+    {
+      "day": "Thu",
+      "delay_pct": 29.0
+    },
+    {
+      "day": "Fri",
+      "delay_pct": 28.5
+    },
+    {
+      "day": "Sat",
+      "delay_pct": 27.9
+    },
+    {
+      "day": "Sun",
+      "delay_pct": 29.9
+    }
+  ]
+}

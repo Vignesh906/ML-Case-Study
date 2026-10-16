@@ -1,0 +1,60 @@
+{
+  "model_architecture": "Mode-Specific HistGradientBoostingRegressor & Quantile Ensemble",
+  "train_time_sec": 24.344,
+  "overall_mae_minutes": 5.5,
+  "overall_rmse_minutes": 13.76,
+  "mode_metrics": {
+    "BUS": {
+      "sample_count": 3000,
+      "mae_minutes": 5.19,
+      "rmse_minutes": 7.19,
+      "baseline_median_mae": 4.82,
+      "baseline_mean_mae": 5.6,
+      "baseline_rmse": 8.88,
+      "beats_baseline": false,
+      "typical_median_pred_mean": 0.0,
+      "high_end_p90_pred_mean": 11.03,
+      "actual_test_median": 0.0,
+      "actual_test_p90": 14.0
+    },
+    "TRAIN": {
+      "sample_count": 3000,
+      "mae_minutes": 5.07,
+      "rmse_minutes": 6.97,
+      "baseline_median_mae": 5.05,
+      "baseline_mean_mae": 5.51,
+      "baseline_rmse": 8.89,
+      "beats_baseline": false,
+      "typical_median_pred_mean": 0.0,
+      "high_end_p90_pred_mean": 11.16,
+      "actual_test_median": 0.0,
+      "actual_test_p90": 14.0
+    },
+    "METRO": {
+      "sample_count": 3000,
+      "mae_minutes": 1.73,
+      "rmse_minutes": 3.04,
+      "baseline_median_mae": 1.13,
+      "baseline_mean_mae": 1.72,
+      "baseline_rmse": 3.27,
+      "beats_baseline": false,
+      "typical_median_pred_mean": 0.0,
+      "high_end_p90_pred_mean": 3.57,
+      "actual_test_median": 0.0,
+      "actual_test_p90": 4.0
+    },
+    "AIRPLANE": {
+      "sample_count": 3000,
+      "mae_minutes": 10.03,
+      "rmse_minutes": 25.45,
+      "baseline_median_mae": 8.08,
+      "baseline_mean_mae": 15.33,
+      "baseline_rmse": 26.45,
+      "beats_baseline": false,
+      "typical_median_pred_mean": 0.0,
+      "high_end_p90_pred_mean": 31.31,
+      "actual_test_median": 0.0,
+      "actual_test_p90": 24.0
+    }
+  }
+}

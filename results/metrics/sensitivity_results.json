@@ -1,0 +1,704 @@
+[
+  {
+    "mode": "BUS",
+    "category": "Weather",
+    "setting": "cloudy",
+    "expected_delay": 6.0363,
+    "delta_delay": 0.369,
+    "p_severe_pct": 30.18,
+    "delta_p_severe_pts": 1.84
+  },
+  {
+    "mode": "BUS",
+    "category": "Weather",
+    "setting": "fog",
+    "expected_delay": 5.3051,
+    "delta_delay": -0.3622,
+    "p_severe_pct": 26.53,
+    "delta_p_severe_pts": -1.81
+  },
+  {
+    "mode": "BUS",
+    "category": "Weather",
+    "setting": "light_rain",
+    "expected_delay": 5.785,
+    "delta_delay": 0.1177,
+    "p_severe_pct": 28.93,
+    "delta_p_severe_pts": 0.59
+  },
+  {
+    "mode": "BUS",
+    "category": "Weather",
+    "setting": "heavy_rain",
+    "expected_delay": 4.9648,
+    "delta_delay": -0.7025,
+    "p_severe_pct": 24.35,
+    "delta_p_severe_pts": -3.99
+  },
+  {
+    "mode": "BUS",
+    "category": "Weather",
+    "setting": "snow",
+    "expected_delay": 4.976,
+    "delta_delay": -0.6913,
+    "p_severe_pct": 20.13,
+    "delta_p_severe_pts": -8.21
+  },
+  {
+    "mode": "BUS",
+    "category": "Weather",
+    "setting": "storm",
+    "expected_delay": 4.701,
+    "delta_delay": -0.9663,
+    "p_severe_pct": 23.16,
+    "delta_p_severe_pts": -5.17
+  },
+  {
+    "mode": "BUS",
+    "category": "Temperature",
+    "setting": "-5 C",
+    "expected_delay": 5.7981,
+    "delta_delay": 0.1309,
+    "p_severe_pct": 28.99,
+    "delta_p_severe_pts": 0.65
+  },
+  {
+    "mode": "BUS",
+    "category": "Temperature",
+    "setting": "38 C",
+    "expected_delay": 3.9641,
+    "delta_delay": -1.7032,
+    "p_severe_pct": 19.82,
+    "delta_p_severe_pts": -8.52
+  },
+  {
+    "mode": "BUS",
+    "category": "Hour",
+    "setting": "8 AM Peak",
+    "expected_delay": 3.9321,
+    "delta_delay": -1.7352,
+    "p_severe_pct": 19.66,
+    "delta_p_severe_pts": -8.68
+  },
+  {
+    "mode": "BUS",
+    "category": "Hour",
+    "setting": "17 PM Peak",
+    "expected_delay": 4.5992,
+    "delta_delay": -1.0681,
+    "p_severe_pct": 23.0,
+    "delta_p_severe_pts": -5.34
+  },
+  {
+    "mode": "BUS",
+    "category": "Hour",
+    "setting": "23 PM Night",
+    "expected_delay": 4.1752,
+    "delta_delay": -1.4921,
+    "p_severe_pct": 20.88,
+    "delta_p_severe_pts": -7.46
+  },
+  {
+    "mode": "BUS",
+    "category": "Occupancy",
+    "setting": "Low (0.25)",
+    "expected_delay": 5.8268,
+    "delta_delay": 0.1595,
+    "p_severe_pct": 29.13,
+    "delta_p_severe_pts": 0.8
+  },
+  {
+    "mode": "BUS",
+    "category": "Occupancy",
+    "setting": "High (0.85)",
+    "expected_delay": 6.0143,
+    "delta_delay": 0.347,
+    "p_severe_pct": 30.07,
+    "delta_p_severe_pts": 1.73
+  },
+  {
+    "mode": "BUS",
+    "category": "Occupancy",
+    "setting": "Crush (0.95)",
+    "expected_delay": 5.6783,
+    "delta_delay": 0.011,
+    "p_severe_pct": 28.39,
+    "delta_p_severe_pts": 0.05
+  },
+  {
+    "mode": "BUS",
+    "category": "Headway",
+    "setting": "Short (3 min)",
+    "expected_delay": 6.0109,
+    "delta_delay": 0.3436,
+    "p_severe_pct": 30.05,
+    "delta_p_severe_pts": 1.72
+  },
+  {
+    "mode": "BUS",
+    "category": "Headway",
+    "setting": "Long (25 min)",
+    "expected_delay": 5.0641,
+    "delta_delay": -0.6032,
+    "p_severe_pct": 25.32,
+    "delta_p_severe_pts": -3.02
+  },
+  {
+    "mode": "BUS",
+    "category": "Capacity",
+    "setting": "Double Capacity",
+    "expected_delay": 5.7564,
+    "delta_delay": 0.0891,
+    "p_severe_pct": 28.78,
+    "delta_p_severe_pts": 0.45
+  },
+  {
+    "mode": "BUS",
+    "category": "Hist Delay",
+    "setting": "High (15 min)",
+    "expected_delay": 8.0049,
+    "delta_delay": 2.3377,
+    "p_severe_pct": 21.86,
+    "delta_p_severe_pts": -6.47
+  },
+  {
+    "mode": "BUS",
+    "category": "Duration",
+    "setting": "Long Duration",
+    "expected_delay": 6.3276,
+    "delta_delay": 0.6603,
+    "p_severe_pct": 31.64,
+    "delta_p_severe_pts": 3.3
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Weather",
+    "setting": "cloudy",
+    "expected_delay": 5.4724,
+    "delta_delay": 0.2332,
+    "p_severe_pct": 27.36,
+    "delta_p_severe_pts": 1.17
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Weather",
+    "setting": "fog",
+    "expected_delay": 4.2937,
+    "delta_delay": -0.9455,
+    "p_severe_pct": 20.66,
+    "delta_p_severe_pts": -5.54
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Weather",
+    "setting": "light_rain",
+    "expected_delay": 4.5804,
+    "delta_delay": -0.6589,
+    "p_severe_pct": 22.9,
+    "delta_p_severe_pts": -3.3
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Weather",
+    "setting": "heavy_rain",
+    "expected_delay": 6.7817,
+    "delta_delay": 1.5425,
+    "p_severe_pct": 19.1,
+    "delta_p_severe_pts": -7.09
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Weather",
+    "setting": "snow",
+    "expected_delay": 9.5061,
+    "delta_delay": 4.2669,
+    "p_severe_pct": 25.05,
+    "delta_p_severe_pts": -1.15
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Weather",
+    "setting": "storm",
+    "expected_delay": 13.0619,
+    "delta_delay": 7.8227,
+    "p_severe_pct": 18.98,
+    "delta_p_severe_pts": -7.22
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Temperature",
+    "setting": "-5 C",
+    "expected_delay": 4.4665,
+    "delta_delay": -0.7727,
+    "p_severe_pct": 22.33,
+    "delta_p_severe_pts": -3.86
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Temperature",
+    "setting": "38 C",
+    "expected_delay": 5.9545,
+    "delta_delay": 0.7153,
+    "p_severe_pct": 29.77,
+    "delta_p_severe_pts": 3.58
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Hour",
+    "setting": "8 AM Peak",
+    "expected_delay": 5.1064,
+    "delta_delay": -0.1328,
+    "p_severe_pct": 25.53,
+    "delta_p_severe_pts": -0.66
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Hour",
+    "setting": "17 PM Peak",
+    "expected_delay": 5.1955,
+    "delta_delay": -0.0437,
+    "p_severe_pct": 25.98,
+    "delta_p_severe_pts": -0.22
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Hour",
+    "setting": "23 PM Night",
+    "expected_delay": 6.3805,
+    "delta_delay": 1.1413,
+    "p_severe_pct": 31.9,
+    "delta_p_severe_pts": 5.71
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Occupancy",
+    "setting": "Low (0.25)",
+    "expected_delay": 4.8245,
+    "delta_delay": -0.4147,
+    "p_severe_pct": 24.12,
+    "delta_p_severe_pts": -2.07
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Occupancy",
+    "setting": "High (0.85)",
+    "expected_delay": 5.36,
+    "delta_delay": 0.1208,
+    "p_severe_pct": 26.8,
+    "delta_p_severe_pts": 0.6
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Occupancy",
+    "setting": "Crush (0.95)",
+    "expected_delay": 5.4255,
+    "delta_delay": 0.1862,
+    "p_severe_pct": 27.13,
+    "delta_p_severe_pts": 0.93
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Headway",
+    "setting": "Short (3 min)",
+    "expected_delay": 5.1924,
+    "delta_delay": -0.0468,
+    "p_severe_pct": 25.96,
+    "delta_p_severe_pts": -0.23
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Headway",
+    "setting": "Long (25 min)",
+    "expected_delay": 5.1244,
+    "delta_delay": -0.1149,
+    "p_severe_pct": 25.62,
+    "delta_p_severe_pts": -0.57
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Capacity",
+    "setting": "Double Capacity",
+    "expected_delay": 5.2937,
+    "delta_delay": 0.0545,
+    "p_severe_pct": 26.47,
+    "delta_p_severe_pts": 0.27
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Hist Delay",
+    "setting": "High (15 min)",
+    "expected_delay": 6.8285,
+    "delta_delay": 1.5893,
+    "p_severe_pct": 24.83,
+    "delta_p_severe_pts": -1.36
+  },
+  {
+    "mode": "TRAIN",
+    "category": "Duration",
+    "setting": "Long Duration",
+    "expected_delay": 4.9859,
+    "delta_delay": -0.2534,
+    "p_severe_pct": 24.93,
+    "delta_p_severe_pts": -1.27
+  },
+  {
+    "mode": "METRO",
+    "category": "Weather",
+    "setting": "cloudy",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 31.0,
+    "delta_p_severe_pts": 4.81
+  },
+  {
+    "mode": "METRO",
+    "category": "Weather",
+    "setting": "fog",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 25.97,
+    "delta_p_severe_pts": -0.22
+  },
+  {
+    "mode": "METRO",
+    "category": "Weather",
+    "setting": "light_rain",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 30.2,
+    "delta_p_severe_pts": 4.01
+  },
+  {
+    "mode": "METRO",
+    "category": "Weather",
+    "setting": "heavy_rain",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 26.5,
+    "delta_p_severe_pts": 0.31
+  },
+  {
+    "mode": "METRO",
+    "category": "Weather",
+    "setting": "snow",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 25.69,
+    "delta_p_severe_pts": -0.5
+  },
+  {
+    "mode": "METRO",
+    "category": "Weather",
+    "setting": "storm",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 25.26,
+    "delta_p_severe_pts": -0.93
+  },
+  {
+    "mode": "METRO",
+    "category": "Temperature",
+    "setting": "-5 C",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 26.03,
+    "delta_p_severe_pts": -0.16
+  },
+  {
+    "mode": "METRO",
+    "category": "Temperature",
+    "setting": "38 C",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 19.42,
+    "delta_p_severe_pts": -6.77
+  },
+  {
+    "mode": "METRO",
+    "category": "Hour",
+    "setting": "8 AM Peak",
+    "expected_delay": 2.875,
+    "delta_delay": 1.4538,
+    "p_severe_pct": 36.7,
+    "delta_p_severe_pts": 10.51
+  },
+  {
+    "mode": "METRO",
+    "category": "Hour",
+    "setting": "17 PM Peak",
+    "expected_delay": 3.2121,
+    "delta_delay": 1.7908,
+    "p_severe_pct": 25.99,
+    "delta_p_severe_pts": -0.2
+  },
+  {
+    "mode": "METRO",
+    "category": "Hour",
+    "setting": "23 PM Night",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 15.86,
+    "delta_p_severe_pts": -10.33
+  },
+  {
+    "mode": "METRO",
+    "category": "Occupancy",
+    "setting": "Low (0.25)",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 24.61,
+    "delta_p_severe_pts": -1.58
+  },
+  {
+    "mode": "METRO",
+    "category": "Occupancy",
+    "setting": "High (0.85)",
+    "expected_delay": 4.9195,
+    "delta_delay": 3.4982,
+    "p_severe_pct": 22.33,
+    "delta_p_severe_pts": -3.86
+  },
+  {
+    "mode": "METRO",
+    "category": "Occupancy",
+    "setting": "Crush (0.95)",
+    "expected_delay": 4.9195,
+    "delta_delay": 3.4982,
+    "p_severe_pct": 22.33,
+    "delta_p_severe_pts": -3.86
+  },
+  {
+    "mode": "METRO",
+    "category": "Headway",
+    "setting": "Short (3 min)",
+    "expected_delay": 1.1827,
+    "delta_delay": -0.2385,
+    "p_severe_pct": 26.06,
+    "delta_p_severe_pts": -0.13
+  },
+  {
+    "mode": "METRO",
+    "category": "Headway",
+    "setting": "Long (25 min)",
+    "expected_delay": 2.122,
+    "delta_delay": 0.7008,
+    "p_severe_pct": 22.93,
+    "delta_p_severe_pts": -3.27
+  },
+  {
+    "mode": "METRO",
+    "category": "Capacity",
+    "setting": "Double Capacity",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 27.66,
+    "delta_p_severe_pts": 1.47
+  },
+  {
+    "mode": "METRO",
+    "category": "Hist Delay",
+    "setting": "High (15 min)",
+    "expected_delay": 9.5333,
+    "delta_delay": 8.1121,
+    "p_severe_pct": 22.34,
+    "delta_p_severe_pts": -3.85
+  },
+  {
+    "mode": "METRO",
+    "category": "Duration",
+    "setting": "Long Duration",
+    "expected_delay": 1.4212,
+    "delta_delay": 0.0,
+    "p_severe_pct": 22.68,
+    "delta_p_severe_pts": -3.51
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Weather",
+    "setting": "cloudy",
+    "expected_delay": 8.7534,
+    "delta_delay": 1.0483,
+    "p_severe_pct": 30.38,
+    "delta_p_severe_pts": 0.87
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Weather",
+    "setting": "light_rain",
+    "expected_delay": 8.068,
+    "delta_delay": 0.3629,
+    "p_severe_pct": 29.71,
+    "delta_p_severe_pts": 0.2
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Weather",
+    "setting": "heavy_rain",
+    "expected_delay": 16.7264,
+    "delta_delay": 9.0212,
+    "p_severe_pct": 32.09,
+    "delta_p_severe_pts": 2.58
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Weather",
+    "setting": "snow",
+    "expected_delay": 15.3239,
+    "delta_delay": 7.6188,
+    "p_severe_pct": 27.15,
+    "delta_p_severe_pts": -2.35
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Temperature",
+    "setting": "-5 C",
+    "expected_delay": 7.814,
+    "delta_delay": 0.1088,
+    "p_severe_pct": 29.26,
+    "delta_p_severe_pts": -0.25
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Temperature",
+    "setting": "38 C",
+    "expected_delay": 12.7115,
+    "delta_delay": 5.0063,
+    "p_severe_pct": 28.4,
+    "delta_p_severe_pts": -1.11
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Hour",
+    "setting": "8 AM Peak",
+    "expected_delay": 4.5286,
+    "delta_delay": -3.1766,
+    "p_severe_pct": 20.54,
+    "delta_p_severe_pts": -8.97
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Hour",
+    "setting": "17 PM Peak",
+    "expected_delay": 5.773,
+    "delta_delay": -1.9322,
+    "p_severe_pct": 26.18,
+    "delta_p_severe_pts": -3.33
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Hour",
+    "setting": "23 PM Night",
+    "expected_delay": 10.2653,
+    "delta_delay": 2.5601,
+    "p_severe_pct": 26.8,
+    "delta_p_severe_pts": -2.71
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Occupancy",
+    "setting": "Low (0.25)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Occupancy",
+    "setting": "High (0.85)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Occupancy",
+    "setting": "Crush (0.95)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Headway",
+    "setting": "Short (3 min)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Headway",
+    "setting": "Long (25 min)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Capacity",
+    "setting": "Double Capacity",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Hist Delay",
+    "setting": "High (15 min)",
+    "expected_delay": 7.6575,
+    "delta_delay": -0.0476,
+    "p_severe_pct": 28.85,
+    "delta_p_severe_pts": -0.65
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Duration",
+    "setting": "Long Duration",
+    "expected_delay": 6.4726,
+    "delta_delay": -1.2325,
+    "p_severe_pct": 26.87,
+    "delta_p_severe_pts": -2.64
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Carrier",
+    "setting": "EV (High Delay Carrier)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Carrier",
+    "setting": "HA (Low Delay Carrier)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Origin",
+    "setting": "ORD (Chicago)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  },
+  {
+    "mode": "AIRPLANE",
+    "category": "Origin",
+    "setting": "PHX (Phoenix)",
+    "expected_delay": 7.7052,
+    "delta_delay": 0.0,
+    "p_severe_pct": 29.51,
+    "delta_p_severe_pts": 0.0
+  }
+]

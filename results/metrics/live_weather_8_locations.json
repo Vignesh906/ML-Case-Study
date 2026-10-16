@@ -1,0 +1,122 @@
+{
+  "New_York": {
+    "location": "New York, NY",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.006&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 25.1,
+    "wmo_code": 1,
+    "condition": "cloudy",
+    "wind_speed_kmh": 16.7,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:14Z",
+    "status": "LIVE_SUCCESS"
+  },
+  "Chicago": {
+    "location": "Chicago, IL",
+    "coordinates": {
+      "latitude": 41.8781,
+      "longitude": -87.6298
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=41.8781&longitude=-87.6298&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 16.4,
+    "wmo_code": 3,
+    "condition": "cloudy",
+    "wind_speed_kmh": 12.5,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:15Z",
+    "status": "LIVE_SUCCESS"
+  },
+  "London": {
+    "location": "London, UK",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=51.5074&longitude=-0.1278&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 16.6,
+    "wmo_code": 3,
+    "condition": "cloudy",
+    "wind_speed_kmh": 14.4,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:17Z",
+    "status": "LIVE_SUCCESS"
+  },
+  "Berlin": {
+    "location": "Berlin, Germany",
+    "coordinates": {
+      "latitude": 52.52,
+      "longitude": 13.405
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.405&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 12.4,
+    "wmo_code": 2,
+    "condition": "cloudy",
+    "wind_speed_kmh": 6.9,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:18Z",
+    "status": "LIVE_SUCCESS"
+  },
+  "Mumbai": {
+    "location": "Mumbai, India",
+    "coordinates": {
+      "latitude": 19.076,
+      "longitude": 72.8777
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=19.076&longitude=72.8777&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 29.9,
+    "wmo_code": 0,
+    "condition": "clear",
+    "wind_speed_kmh": 8.0,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:20Z",
+    "status": "LIVE_SUCCESS"
+  },
+  "ATL": {
+    "location": "Atlanta Hartsfield-Jackson (ATL)",
+    "coordinates": {
+      "latitude": 33.6407,
+      "longitude": -84.4277
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=33.6407&longitude=-84.4277&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 30.8,
+    "wmo_code": 0,
+    "condition": "clear",
+    "wind_speed_kmh": 7.2,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:22Z",
+    "status": "LIVE_SUCCESS"
+  },
+  "ORD": {
+    "location": "Chicago O'Hare (ORD)",
+    "coordinates": {
+      "latitude": 41.9742,
+      "longitude": -87.9073
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=41.9742&longitude=-87.9073&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 16.9,
+    "wmo_code": 3,
+    "condition": "cloudy",
+    "wind_speed_kmh": 13.5,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:23Z",
+    "status": "LIVE_SUCCESS"
+  },
+  "LAX": {
+    "location": "Los Angeles International (LAX)",
+    "coordinates": {
+      "latitude": 33.9416,
+      "longitude": -118.4085
+    },
+    "api_url": "https://api.open-meteo.com/v1/forecast?latitude=33.9416&longitude=-118.4085&current=temperature_2m,weather_code,wind_speed_10m",
+    "temperature_c": 27.0,
+    "wmo_code": 0,
+    "condition": "clear",
+    "wind_speed_kmh": 9.1,
+    "observed_time_utc": "2026-10-14T19:15Z",
+    "retrieval_time_utc": "2026-10-14T19:28:25Z",
+    "status": "LIVE_SUCCESS"
+  }
+}

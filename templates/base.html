@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Multimodal Transportation Delay Prediction System using Machine Learning for Bus, Train, Metro, and Airplane.">
+  <title>{% block title %}Multimodal Transportation Delay Prediction{% endblock %}</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Plotly.js for interactive analytics -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2.5">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="{{ url_for('dashboard') }}" class="nav-brand">
+        <div class="brand-icon">🚆</div>
+        <div class="brand-text">
+          <h1>Multimodal Delay AI</h1>
+          <p>Bus • Train • Metro • Airplane</p>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="{{ url_for('dashboard') }}" class="nav-link {% if active_page == 'dashboard' %}active{% endif %}">
+            <span>📊</span> Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('prediction') }}" class="nav-link {% if active_page == 'prediction' %}active{% endif %}">
+            <span>⚡</span> Prediction
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('models_comparison') }}" class="nav-link {% if active_page == 'models' %}active{% endif %}">
+            <span>🏆</span> Models
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('analytics') }}" class="nav-link {% if active_page == 'analytics' %}active{% endif %}">
+            <span>📈</span> Analytics
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('about') }}" class="nav-link {% if active_page == 'about' %}active{% endif %}">
+            <span>📖</span> About
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main View Container -->
+  <main class="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Multimodal Transportation Delay Prediction System • Academic Machine Learning Platform • Powered by Scikit-Learn (Random Forest & KNN)</p>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="{{ url_for('static', filename='js/main.js') }}?v=2.5"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>
